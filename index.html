@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Removedor de Espaços SPED</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" charset="utf-8">
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-6 col-xs-offset-3 text-center">
+          <img src="logo.png" alt="Logo" width="200" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-10 col-xs-offset-1">
+          <div>
+            <div class="input-group" id="inputDiv">
+              <span class="input-group-addon">Selecione um arquivo:</span>
+              <input type="file" id="inputFile" class="form-control" onchange="proccessFile()">
+            </div>
+          </div>
+          <div>
+            <div class="progress hide" id="progress">
+              <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                <span class="sr">Processando...</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 text-center text-info">
+          <br>
+          <strong>Planos Assessoria - <span id="year"></span></strong>
+        </div>
+      </div>
+    </div>
+  </body>
+  <!-- <script src="bower_components/jquery/dist/jquery.js" charset="utf-8"></script> -->
+  <script>window.$ = window.jQuery = require('./bower_components/jquery/dist/jquery.js');</script>
+  <script src="removeSpaces.js" charset="utf-8"></script>
+  <script>
+    // You can also require other files to run in this process
+    require('./renderer.js')
+  </script>
+</html>
